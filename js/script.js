@@ -31,8 +31,8 @@ else{
 printMessage('komputer wylosował: ' + computerMove);
 printMessage('gracz wybrał: ' + playerMove);
 
-if(playerInput > 3){
-    printMessage('Gracz podał liczbe z poza zakresu');
+if(playerInput > 3 || playerInput == null){
+    let playerInput = prompt('Podana liczba jest błędna! Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 }
 else if(roundNumber == 1 && playerInput == 1){
     printMessage("REMIS");
