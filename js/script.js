@@ -18,6 +18,13 @@ let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.
 
 console.log('Gracz wybrał ' + playerInput);
 
+printMessage('komputer wylosował: ' + computerMove);
+
+
+while(playerInput > 3 || playerInput == null || playerInput <= 0){
+    playerInput = prompt('Podana liczba jest błędna! Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+}
+
 if(playerInput == 1){
     playerMove = 'kamień';
 }
@@ -28,13 +35,9 @@ else{
     playerMove = 'nożyce';
 }
 
-printMessage('komputer wylosował: ' + computerMove);
 printMessage('gracz wybrał: ' + playerMove);
 
-if(playerInput > 3 || playerInput == null){
-    let playerInput = prompt('Podana liczba jest błędna! Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-}
-else if(roundNumber == 1 && playerInput == 1){
+if(roundNumber == 1 && playerInput == 1){
     printMessage("REMIS");
 }
 else if(roundNumber == 1 && playerInput == 2){
